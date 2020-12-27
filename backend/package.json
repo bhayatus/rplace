@@ -1,0 +1,20 @@
+{
+    "name": "backend",
+    "version": "1.0.0",
+    "description": "rplace backend",
+    "author": "bhayatus",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js"
+    },
+    "dependencies": {
+        "express": "4.17.1",
+        "socket.io": "3.0.3",
+        "ioredis": "4.19.2",
+        "pg": "8.5.1",
+        "dotenv": "8.2.0",
+        "body-parser": "1.19.0",
+        "request-ip": "2.1.3",
+        "validate.js": "0.13.1"
+    }
+}

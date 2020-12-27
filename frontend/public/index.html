@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en"> 
+	<head>
+		<meta charset="UTF-8" />
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+        <meta http-equiv="Pragma" content="no-cache"/>
+        <meta http-equiv="Expires" content="0"/>
+        <link rel="icon" href="img/favicon.ico" sizes="16x16">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.panzoom/4.0.0/panzoom.min.js"></script> 
+        <script src="https://cdn.socket.io/socket.io-3.0.1.min.js"></script>
+        <script src="js/snackbar.min.js"></script>
+        <script src="js/script.js"></script> 
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/snackbar.min.css">
+        <link rel="stylesheet" href="css/spinner.min.css">
+        <link rel="stylesheet" href="css/index.css">
+		<title>r/place</title>
+	</head>
+	<body>
+        <div id="loading-overlay">
+            <div class="sk-circle">
+                <div class="sk-circle1 sk-child"></div>
+                <div class="sk-circle2 sk-child"></div>
+                <div class="sk-circle3 sk-child"></div>
+                <div class="sk-circle4 sk-child"></div>
+                <div class="sk-circle5 sk-child"></div>
+                <div class="sk-circle6 sk-child"></div>
+                <div class="sk-circle7 sk-child"></div>
+                <div class="sk-circle8 sk-child"></div>
+                <div class="sk-circle9 sk-child"></div>
+                <div class="sk-circle10 sk-child"></div>
+                <div class="sk-circle11 sk-child"></div>
+                <div class="sk-circle12 sk-child"></div>
+            </div>
+        </div>
+        <div id="container">
+            <div class="top-bar">
+                <div id="cooldown-display" class="text"></div>
+                <div class="title text">r/place</div>
+                <img id="network-status-disconnected-icon" class="network-status-icon" src="img/disconnected.svg"/>
+                <img id="network-status-connected-icon" class="network-status-icon" src="img/connected.svg"/>
+            </div>
+            <div class="button zoom-in-button"><img width="28px" height="28px" src="img/zoom_in.svg"/></div>
+            <div class="button zoom-out-button"><img width="28px" height="28px" src="img/zoom_out.svg"/></div>
+            <div id="center-button" class="button"><img width="20px" height="20px" src="img/center.svg"/></div>
+            <div class="color-buttons-container">
+                <div id="color-button-FFFFFF" class="color-button"><img id="selected-color-icon-FFFFFF" class="selected-color-icon" width="20px" height="20px" src="img/checkmark.svg"/></div>
+                <div id="color-button-E4E4E4" class="color-button"><img id="selected-color-icon-E4E4E4" class="selected-color-icon" width="20px" height="20px" src="img/checkmark.svg"/></div>
+                <div id="color-button-888888" class="color-button"><img id="selected-color-icon-888888" class="selected-color-icon" width="20px" height="20px" src="img/checkmark.svg"/></div>
+                <div id="color-button-222222" class="color-button"><img id="selected-color-icon-222222" class="selected-color-icon" width="20px" height="20px" src="img/checkmark.svg"/></div>
+                <div id="color-button-FFA7D1" class="color-button"><img id="selected-color-icon-FFA7D1" class="selected-color-icon" width="20px" height="20px" src="img/checkmark.svg"/></div>
+                <div id="color-button-E50000" class="color-button"><img id="selected-color-icon-E50000" class="selected-color-icon" width="20px" height="20px" src="img/checkmark.svg"/></div>
+                <div id="color-button-E59500" class="color-button"><img id="selected-color-icon-E59500" class="selected-color-icon" width="20px" height="20px" src="img/checkmark.svg"/></div>
+                <div id="color-button-A06A42" class="color-button"><img id="selected-color-icon-A06A42" class="selected-color-icon" width="20px" height="20px" src="img/checkmark.svg"/></div>
+                <div id="color-button-E5D900" class="color-button"><img id="selected-color-icon-E5D900" class="selected-color-icon" width="20px" height="20px" src="img/checkmark.svg"/></div>
+                <div id="color-button-94E044" class="color-button"><img id="selected-color-icon-94E044" class="selected-color-icon" width="20px" height="20px" src="img/checkmark.svg"/></div>
+                <div id="color-button-02BE01" class="color-button"><img id="selected-color-icon-02BE01" class="selected-color-icon" width="20px" height="20px" src="img/checkmark.svg"/></div>
+                <div id="color-button-00D3DD" class="color-button"><img id="selected-color-icon-00D3DD" class="selected-color-icon" width="20px" height="20px" src="img/checkmark.svg"/></div>
+                <div id="color-button-0083C7" class="color-button"><img id="selected-color-icon-0083C7" class="selected-color-icon" width="20px" height="20px" src="img/checkmark.svg"/></div>
+                <div id="color-button-0000EA" class="color-button"><img id="selected-color-icon-0000EA" class="selected-color-icon" width="20px" height="20px" src="img/checkmark.svg"/></div>
+                <div id="color-button-CF6EE4" class="color-button"><img id="selected-color-icon-CF6EE4" class="selected-color-icon" width="20px" height="20px" src="img/checkmark.svg"/></div>
+                <div id="color-button-820080" class="color-button"><img id="selected-color-icon-820080" class="selected-color-icon" width="20px" height="20px" src="img/checkmark.svg"/></div>
+            </div>
+            <canvas id="canvas"></canvas>
+            <div id="coordinates" class="text">0, 0</div>
+        </div>
+
+    </body>
+</html>

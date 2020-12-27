@@ -1,0 +1,230 @@
+body {
+    background-color: #222222;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+#loading-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; 
+    width: 100%; 
+    height: 100%; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.9);
+    z-index: 3;
+    visibility: hidden;
+}
+
+canvas {
+    background-color: #FFFFFF;
+    image-rendering: optimizeSpeed;
+    image-rendering: pixelated;
+    z-index: -1;
+}
+
+img {
+    pointer-events: none;
+}
+
+.text {
+    color: #FFFFFF;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    user-select: none;
+}
+
+.top-bar {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.title {
+    font-size: 26px;
+    font-weight: 200;
+    padding: 10px 0px 10px 0px;
+}
+
+#cooldown-display {
+    position: absolute;
+    left: 0;
+    padding: 10px 10px 10px 10px;
+    font-size: 22px;
+    visibility: hidden;
+}
+
+.network-status-icon {
+    position: absolute;
+    right: 0;
+    padding: 10px 17px 10px 10px;
+    visibility: hidden;
+}
+
+#coordinates {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 130px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 0px 10px 10px 0px;
+    z-index: 2;
+}
+
+.button {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    z-index: 2
+}
+
+#center-button {
+    top: 190px;
+}
+
+.button:hover {
+    background-color: #000000;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.zoom-in-button {
+    top: 70px;
+}
+
+.zoom-out-button {
+    top: 130px;
+}
+
+.color-buttons-container {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: 70px 0px 0px 10px;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.color-button {
+    width: 55px;
+    height: 25px;
+    border-radius: 7px 12px;
+    margin: 10px 10px 10px 10px;
+    z-index: 2;
+}
+
+.color-button:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+#color-button-FFFFFF {
+    background-color: #FFFFFF;
+    border: 2px solid #CCCCCC;
+}
+
+#color-button-E4E4E4 {
+    background-color: #E4E4E4;
+    border: 2px solid #B6B6B6;
+}
+
+#color-button-888888 {
+    background-color: #888888;
+    border: 2px solid #6C6C6C;
+}
+
+#color-button-222222 {
+    background-color: #222222;
+    border: 2px solid #1B1B1B;
+}
+
+#color-button-FFA7D1 {
+    background-color: #FFA7D1;
+    border: 2px solid #FF52A4;
+}
+
+#color-button-E50000 {
+    background-color: #E50000;
+    border: 2px solid #B70000;
+}
+
+#color-button-E59500 {
+    background-color: #E59500;
+    border: 2px solid #B77700;
+}
+
+#color-button-A06A42 {
+    background-color: #A06A42;
+    border: 2px solid #805434;
+}
+
+#color-button-E5D900 {
+    background-color: #E5D900;
+    border: 2px solid #B7AD00;
+}
+
+#color-button-94E044 {
+    background-color: #94E044;
+    border: 2px solid #76C821;
+}
+
+#color-button-02BE01 {
+    background-color: #02BE01;
+    border: 2px solid #019800;
+}
+
+#color-button-00D3DD {
+    background-color: #00D3DD;
+    border: 2px solid #00A8B0;
+}
+
+#color-button-0083C7 {
+    background-color: #0083C7;
+    border: 2px solid #00689F;
+
+}
+
+#color-button-0000EA {
+    background-color: #0000EA;
+    border: 2px solid #0000bb;
+}
+
+#color-button-CF6EE4 {
+    background-color: #CF6EE4;
+    border: 2px solid #BC35D9;
+}
+
+#color-button-820080 {
+    background-color: #820080;
+    border: 2px solid #680066;
+}
+
+.selected-color-icon {
+    margin: 18% 0 0 73%;
+    visibility: hidden;
+}
+
+.snackbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Source Sans Pro', sans-serif;
+}

@@ -1,0 +1,13 @@
+{
+    "name": "frontend",
+    "version": "1.0.0",
+    "description": "rplace frontend",
+    "author": "bhayatus",
+    "main": "static_server.js",
+    "scripts": {
+        "start": "node static_server.js"
+    },
+    "dependencies": {
+        "express": "4.17.1"
+    }
+}
